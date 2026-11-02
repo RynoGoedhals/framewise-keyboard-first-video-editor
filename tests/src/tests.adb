@@ -6,6 +6,8 @@ with Framewise;           use Framewise;
 with Framewise.Commands;  use Framewise.Commands;
 with Framewise.Session;
 with Framewise.Timeline;  use Framewise.Timeline;
+--  Ryno Added
+with Framewise.FFmpeg;
 
 procedure Tests is
 
@@ -16,6 +18,9 @@ procedure Tests is
    procedure Test_Timeline;
    procedure Test_Commands;
    procedure Test_Session;
+   --  Ryno added
+   procedure Test_FFmpeg;
+
    function Sec (S : String) return Time;
 
    procedure Check (Name : String; Cond : Boolean) is
@@ -196,11 +201,20 @@ procedure Tests is
       Check ("proxy unknown source", not R.Ok and History_Length (S) = 2);
    end Test_Session;
 
+   --  Ryno added
+   procedure Test_FFmpeg is
+   begin
+      Check ("ffmpeg libavformat is linked", Framewise.FFmpeg.Format_Major > 0);
+   end Test_FFmpeg;
+
 begin
    Test_Time;
    Test_Timeline;
    Test_Commands;
    Test_Session;
+   --  Ryno added
+   Test_FFmpeg;
+
    New_Line;
    if Failures = 0 then
       Put_Line ("all tests passed");

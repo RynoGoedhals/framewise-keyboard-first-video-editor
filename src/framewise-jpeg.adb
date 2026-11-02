@@ -1,3 +1,5 @@
+--  original code
+
 package body Framewise.JPEG with SPARK_Mode is
 
    --  PLACEHOLDER. The algorithm is in the spec header.
