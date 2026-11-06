@@ -7,8 +7,8 @@ with Interfaces.C;
 
 package Framewise.FFmpeg.Thin with SPARK_Mode => Off is
 
-   function Avformat_Version return Interfaces.C.unsigned
-     with Import, Convention => C, External_Name => "avformat_version";
+   function Avformat_Version return Interfaces.C.unsigned;
+   pragma Import (C, Avformat_Version, "avformat_version");
    --  C: unsigned avformat_version (void). Major is in bits 16 and up.
 
 end Framewise.FFmpeg.Thin;
