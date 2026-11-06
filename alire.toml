@@ -12,6 +12,8 @@ project-files = ["framewise.gpr"]
 
 [[depends-on]]
 bedrock = "*"
+libav_ada = "*"
 
 [[pins]]
 bedrock = { url = "https://github.com/GNAT-Academic-Program/bedrock.git" }
+libav_ada = { url = "https://github.com/RynoGoedhals/libav_ada" }

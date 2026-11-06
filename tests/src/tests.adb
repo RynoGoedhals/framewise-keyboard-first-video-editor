@@ -8,6 +8,7 @@ with Framewise.Session;
 with Framewise.Timeline;  use Framewise.Timeline;
 --  Ryno Added
 with Framewise.FFmpeg;
+with Libav;
 
 procedure Tests is
 
