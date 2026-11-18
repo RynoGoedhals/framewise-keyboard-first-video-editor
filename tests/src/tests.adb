@@ -213,7 +213,7 @@ begin
    Test_Commands;
    Test_Session;
    --  Ryno added
-   Test_FFmpeg;alr 
+   Test_FFmpeg;
 
    New_Line;
    if Failures = 0 then
