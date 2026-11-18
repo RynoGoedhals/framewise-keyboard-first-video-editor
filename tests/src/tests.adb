@@ -8,7 +8,6 @@ with Framewise.Session;
 with Framewise.Timeline;  use Framewise.Timeline;
 --  Ryno Added
 with Framewise.FFmpeg;
-with Libav;
 
 procedure Tests is
 
@@ -214,7 +213,7 @@ begin
    Test_Commands;
    Test_Session;
    --  Ryno added
-   Test_FFmpeg;
+   Test_FFmpeg;alr 
 
    New_Line;
    if Failures = 0 then
