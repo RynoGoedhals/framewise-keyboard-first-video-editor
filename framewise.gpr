@@ -16,4 +16,9 @@ library project Framewise is
    package Prove is
       for Proof_Switches ("Ada") use ("--level=1", "-j0");
    end Prove;
+
+   --  Ryno Added
+   package Linker is
+      for Linker_Options use ("-lavformat", "-lavcodec", "-lavutil");
+   end Linker;
 end Framewise;
